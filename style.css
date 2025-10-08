@@ -1,1 +1,100 @@
+/* Element selector: affects the whole page */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fafafa;
+}
 
+/* Simple centered layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header and nav */
+.site-header {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.site-header h1 {
+  margin: 0;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+/* Class selector: flex-based nav */
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem 1rem 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+.main-nav a:hover {
+  border-color: #aaa;
+  background: #f0f0f0;
+}
+.main-nav a.active {
+  font-weight: 600;
+  border-color: #000;
+}
+
+/* ID selector: main content wrapper */
+#content {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Tables and lists */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+thead th {
+  background: #f3f3f3;
+}
+
+/* Small helper styles */
+.banner {
+  margin: 0.5rem 0 1rem 0;
+}
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.note {
+  background: #f5f9ff;
+  border: 1px solid #dbe8ff;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 1rem 0;
+}
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+.site-footer .note a:hover { text-decoration: underline; }
