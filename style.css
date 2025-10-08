@@ -98,14 +98,3 @@ thead th {
   text-align: center;
 }
 .site-footer .note a:hover { text-decoration: underline; }
-
-/* Simple figure + caption */
-figure {
-  margin: 1rem 0;
-}
-figcaption {
-  font-size: 0.9rem;
-  color: #red;
-  margin-top: 0.25rem;
-}
-
