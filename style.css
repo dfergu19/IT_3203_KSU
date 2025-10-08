@@ -98,3 +98,33 @@ thead th {
   text-align: center;
 }
 .site-footer .note a:hover { text-decoration: underline; }
+
+/* Key Concepts: cards + 2-column on wide screens */
+.concepts { margin: 0; padding: 0; }
+.concepts .concept {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+}
+.concepts dt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem 0;
+}
+.concepts dd {
+  margin: 0;
+  color: #444;
+}
+
+/* Two columns when there’s room */
+@media (min-width: 700px) {
+  .concepts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .concepts .concept { margin: 0; }
+}
+
