@@ -19,44 +19,67 @@
     </nav>
   </header>
 
-  <main id="content">
-    <section>
-      <h2>Abstract</h2>
-      <p>
-        This site summarizes how HTTP works and why it matters to web performance and security.
+  <div class="container">
+    <main id="content">
+      <section class="banner">
+        <img src="banner here eventually" alt="HTTP project banner">
+      </section>
+
+      <section>
+        <h2>Abstract</h2>
+        <p>
+          This site gives a simple summary of how HTTP works and why it matters for building and loading web pages.
+        </p>
+      </section>
+
+      <section>
+        <h2>Key Terms</h2>
+        <ul>
+          <li>Request / Response</li>
+          <li>Status Codes</li>
+          <li>Headers</li>
+          <li>HTTP/2 and HTTP/3 (basic idea)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Table of Contents</h2>
+        <table aria-label="Table of contents">
+          <thead>
+            <tr><th>Page</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="http-basics.html">HTTP Basics</a></td>
+              <td>What HTTP is and how requests and responses work.</td>
+            </tr>
+            <tr>
+              <td><a href="http-performance.html">HTTP Performance</a></td>
+              <td>Simple look at HTTP/1.1 vs HTTP/2 vs HTTP/3.</td>
+            </tr>
+            <tr>
+              <td><a href="key-concepts.html">Key Concepts</a></td>
+              <td>Short definitions of the main ideas (5–7 items).</td>
+            </tr>
+            <tr>
+              <td><a href="references.html">References</a></td>
+              <td>Helpful links used for learning and verification.</td>
+            </tr>
+            <tr>
+              <td><a href="about.html">About</a></td>
+              <td>Who made this and course details.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note">
+        This is a class project for IT 3203. Course link:
+        <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203/</a>
       </p>
-    </section>
-
-    <section>
-      <h2>Key Terms</h2>
-      <ul>
-        <li>HTTP request/response</li>
-        <li>Status codes</li>
-        <li>HTTP/2 multiplexing</li>
-        <li>HTTP/3 over QUIC</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Table of Contents</h2>
-      <table>
-        <thead><tr><th>Page</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><a href="http-basics.html">HTTP Basics</a></td><td>What HTTP is and how requests and responses work.</td></tr>
-          <tr><td><a href="http-performance.html">HTTP Performance</a></td><td>HTTP/2 and HTTP/3 trade-offs, at a glance.</td></tr>
-          <tr><td><a href="key-concepts.html">Key Concepts</a></td><td>5–7 essential ideas defined clearly.</td></tr>
-          <tr><td><a href="references.html">References</a></td><td>Sources and study links.</td></tr>
-          <tr><td><a href="about.html">About</a></td><td>Who made this and why.</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p class="note">
-      This is a class project for IT 3203.
-      Course link: <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203/</a>
-    </p>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
