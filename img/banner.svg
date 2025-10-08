@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" role="img" aria-labelledby="title">
+  <title id="title">HTTP Project Banner</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f3ff"/>
+      <stop offset="1" stop-color="#e8e8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" stroke="#ddd"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        fill="#444" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        font-size="36">HTTP: A Practical Overview</text>
+</svg>
