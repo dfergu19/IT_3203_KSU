@@ -1,1 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTTP Project — HTTP Basics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>HTTP: A Practical Overview</h1>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="http-basics.html" class="active">HTTP Basics</a>
+      <a href="http-performance.html">HTTP Performance</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
+  <div class="container">
+    <main id="content">
+      <h2>HTTP Basics</h2>
+
+      <p>
+        HTTP (Hypertext Transfer Protocol) is how a browser and a web server talk.
+        The browser sends a <em>request</em>, and the server sends back a <em>response</em>.
+        That’s it! It's a simple idea, and it's used everywhere on the web.
+      </p>
+
+      <div class="note">
+        <strong>Beginner note:</strong> Think of it like ordering at a counter.
+        You say what you want (request). The kitchen brings it back (response).
+      </div>
+
+      <h3>Very small example</h3>
+      <p>What a basic request and response might look like:</p>
+
+      <pre><code>GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: MyBrowser
+Accept: text/html
+</code></pre>
+
+      <pre><code>HTTP/1.1 200 OK
+Content-Type: text/html
+
+&lt;!doctype html&gt;
+&lt;html&gt;...page content...&lt;/html&gt;
+</code></pre>
+
+      <h3>What to remember</h3>
+      <ul>
+        <li>Requests have a method (like <code>GET</code> or <code>POST</code>) and headers.</li>
+        <li>Responses have a status code (200 OK, 404 Not Found, etc.) and headers.</li>
+        <li>The body is the actual content (HTML, CSS, images, JSON, and so on).</li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note">
+        This is a class project for IT 3203. Course link:
+        <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203/</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
