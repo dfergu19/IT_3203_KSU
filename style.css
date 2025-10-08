@@ -128,3 +128,14 @@ thead th {
   .concepts .concept { margin: 0; }
 }
 
+/* Stronger outline for main content box */
+#content {
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* Cards: a bit thicker and soft shadow */
+.concepts .concept {
+  border: 2px solid #e8e8e8;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
