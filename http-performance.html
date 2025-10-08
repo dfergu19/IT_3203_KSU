@@ -1,1 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTTP Project — HTTP Performance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>HTTP: A Practical Overview</h1>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="http-basics.html">HTTP Basics</a>
+      <a href="http-performance.html" class="active">HTTP Performance</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
+  <div class="container">
+    <main id="content">
+      <h2>HTTP Performance</h2>
+
+      <p>
+        This page gives a beginner view of how newer versions of HTTP can help pages load faster
+        or feel smoother. It’s not a deep dive, just the big ideas.
+      </p>
+
+      <h3>Quick comparison</h3>
+      <table aria-label="HTTP versions comparison">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Very short idea</th>
+            <th>What it means for pages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTTP/1.1</td>
+            <td>One file per connection (keep-alive helps).</td>
+            <td>Many files can be slower due to waiting in line.</td>
+          </tr>
+          <tr>
+            <td>HTTP/2</td>
+            <td>Multiplexing: multiple files over one connection.</td>
+            <td>Fewer waits; better use of one connection.</td>
+          </tr>
+          <tr>
+            <td>HTTP/3</td>
+            <td>Runs over QUIC (on UDP) instead of TCP.</td>
+            <td>Can recover from packet loss faster; smoother on flaky networks.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <strong>Plain take:</strong> HTTP/2 and HTTP/3 try to keep your tab busy instead of stuck waiting.
+        That usually means images, CSS, and scripts arrive more efficiently.
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note">
+        This is a class project for IT 3203. Course link:
+        <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203/</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
