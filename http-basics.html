@@ -95,6 +95,24 @@ Content-Type: text/html
     web uses HTTP.
   </p>
 </section>
+
+      <!-- Core semantics (added for milestone 2) -->
+<section id="core-semantics">
+  <h2>Core HTTP Semantics (Quick Ref)</h2>
+  <ul>
+    <li><strong>Methods:</strong> GET (read), POST (create), PUT/PATCH (update), DELETE (remove).</li>
+    <li><strong>Status codes:</strong> 2xx = success, 3xx = redirect, 4xx = client error, 5xx = server error.</li>
+    <li><strong>Headers:</strong> common ones you’ll see are <code>Content-Type</code>, <code>Accept</code>, <code>Cache-Control</code>, <code>Authorization</code>.</li>
+    <li><strong>Stateless by design:</strong> each request stands alone; “state” is added with cookies or similar features when needed.</li>
+    <li><strong>Same semantics, different transports:</strong> the rules above are the same whether you use HTTP/1.1, HTTP/2, or HTTP/3.</li>
+  </ul>
+
+  <p>
+    In 2022, the “core” specs were rewritten and split into multiple documents (semantics, caching, and per-version
+    mappings). This cleaned up old behavior and clarified how HTTP evolves without breaking the core ideas.
+  </p>
+  <!-- Sources for this RFC 9110 (Semantics), RFC 9111 (Caching), and the per-version mappings -->
+</section>
     </main>
 
     <footer class="site-footer">
