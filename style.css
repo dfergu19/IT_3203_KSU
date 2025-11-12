@@ -174,3 +174,101 @@ thead th {
 }
 .score-box.pass { box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15); } /* green  */
 .score-box.fail { box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15); } /* red */
+
+
+/* Dark theme variables (default) */
+:root {
+  --bg: #0e1117;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --panel: #111827;     /* header/footer panels */
+  --card: #161b22;      /* main boxes like content, cards */
+  --soft: #1f2937;      /* subtle rows/thead/note backgrounds */
+  --border: #2b3645;
+  --link: #a78bfa;      /* accent purple */
+  --link-hover: #c4b5fd;
+  --btn-bg: #1f2937;
+  --btn-border: #374151;
+}
+
+/* Light theme overrides */
+html[data-theme="light"] {
+  --bg: #fafafa;
+  --text: #222;
+  --muted: #444;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --soft: #f3f3f3;
+  --border: #e0e0e0;
+  --link: #5b21b6;
+  --link-hover: #6d28d9;
+  --btn-bg: #f3f4f6;
+  --btn-border: #d1d5db;
+}
+
+/* Apply variables over existing styles */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+.site-header {
+  position: relative; /* so toggle can be absolutely positioned */
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+.site-header h1 { color: var(--text); }
+
+/* Toggle button (top-right) */
+.theme-toggle {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--btn-bg);
+  color: var(--text);
+  border: 1px solid var(--btn-border);
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+.theme-toggle:hover { border-color: var(--border); }
+
+/* Nav */
+.main-nav a { color: var(--text); }
+.main-nav a:hover {
+  background: var(--soft);
+  border-color: var(--border);
+}
+
+/* Content wrapper / cards */
+#content {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+/* Tables and list items */
+table { border-color: var(--border); }
+th, td { border-color: var(--border); color: var(--text); }
+thead th { background: var(--soft); }
+
+/* Notes, score boxes, concept cards, quiz cards */
+.note,
+.score-box,
+.concepts .concept,
+.quiz-form .question {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+.score-box,
+.note { background: var(--soft); }
+
+/* Links (outside the main nav) */
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+/* Banner image border in dark mode */
+.banner img { border-color: var(--border); }
+
