@@ -107,6 +107,45 @@
     major CDNs and large sites.
   </p>
 </section>   
+      
+      <!-- HTTP/2 overview (added for milestone 2) -->
+<section id="http2-overview">
+  <h2>HTTP/2 in Practice: Why It Feels Faster</h2>
+  <p>
+    HTTP/2 keeps the same HTTP semantics but changes how bytes move on the wire: it uses a binary framing layer
+    with many streams over <em>one</em> TCP connection. That enables <strong>multiplexing</strong> (several requests at once),
+    <strong>HPACK</strong> header compression, and flow control. Pages with lots of subresources (CSS/JS/images) usually see fewer stalls
+    and faster delivery than HTTP/1.1.
+  </p>
+  <!-- Source RFC 9113 overview; section on H2 benefits -->
+</section>
+
+<!-- HTTP/3 overview (added for milestone 2) -->
+<section id="http3-overview">
+  <h2>HTTP/3 over QUIC: Better on Flaky Networks</h2>
+  <ul>
+    <li><strong>No cross-stream HoL blocking:</strong> a lost packet doesn’t pause every stream.</li>
+    <li><strong>0-RTT resumption:</strong> reconnect faster to recently visited sites.</li>
+    <li><strong>Connection migration:</strong> your downloads keep going if you switch from Wi-Fi to cellular.</li>
+    <li><strong>QPACK:</strong> header compression designed to avoid blocking between streams.</li>
+  </ul>
+  <p>
+    These are QUIC transport features that HTTP/3 builds on, and they tend to help most on mobile or lossy links.
+  </p>
+  <!-- Sources RFC 9114 (HTTP/3), RFC 9000 (QUIC), RFC 9204 (QPACK) -->
+</section>
+
+<!--  Prioritization and server push note (added for milestone 2) -->
+<section id="prioritization-and-push">
+  <h2>Modern Prioritization (and the End of Server Push)</h2>
+  <p>
+    The web is moving to a simpler, version-independent <strong>Priority</strong> header and update frames so browsers can tell
+    servers what matters most. Meanwhile, HTTP/2 <em>server push</em> was removed from Chrome after poor real-world results;
+    sites now prefer tools like <strong>Preload</strong> and <strong>Early Hints</strong> instead.
+  </p>
+  <!-- Sources RFC 9218 prioritization; Chrome dev note about removing HTTP/2 push -->
+</section>
+
     </main>
 
     <footer class="site-footer">
