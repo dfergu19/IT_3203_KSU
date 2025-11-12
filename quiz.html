@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>HTTP: A Practical Overview</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="http-basics.html">HTTP Basics</a>
+        <a href="http-performance.html">HTTP Performance</a>
+        <a href="key-concepts.html">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+        <a class="active" href="quiz.html">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="content">
+      <h2>Self-Assessment Quiz</h2>
+      <p>This quick quiz checks what you learned from the pages on this site.</p>
+
+      <!-- The quiz is in one form. JS handles scoring/feedback. -->
+      <form id="quizForm" class="quiz-form" novalidate>
+        <!-- Q1: fill in the blank -->
+        <fieldset class="question">
+          <legend>1) Fill in the blank</legend>
+          <label for="q1">HTTP/3 runs over the transport protocol called <strong>_____</strong>.</label><br>
+          <input id="q1" name="q1" type="text" autocomplete="off" placeholder="type the name">
+          <div id="fb-q1" class="feedback"></div>
+        </fieldset>
+
+        <!-- Q2: single-answer multiple choice -->
+        <fieldset class="question">
+          <legend>2) Single choice</legend>
+          <p>Which feature helps HTTP/2 improve page loading vs HTTP/1.1?</p>
+          <label><input type="radio" name="q2" value="multiplexing"> Multiplexed streams over one connection</label>
+          <label><input type="radio" name="q2" value="pipelining"> Strict request pipelining</label>
+          <label><input type="radio" name="q2" value="multiple-tcp"> One TCP connection per file</label>
+          <div id="fb-q2" class="feedback"></div>
+        </fieldset>
+
+        <!-- Q3: single-answer multiple choice -->
+        <fieldset class="question">
+          <legend>3) Single choice</legend>
+          <p>HTTP/2 uses which header compression format?</p>
+          <label><input type="radio" name="q3" value="hpack"> HPACK</label>
+          <label><input type="radio" name="q3" value="qpack"> QPACK</label>
+          <label><input type="radio" name="q3" value="gzip"> gzip</label>
+          <div id="fb-q3" class="feedback"></div>
+        </fieldset>
+
+        <!-- Q4: single-answer multiple choice -->
+        <fieldset class="question">
+          <legend>4) Single choice</legend>
+          <p>What happened to HTTP/2 server push in Chrome?</p>
+          <label><input type="radio" name="q4" value="removed"> It was removed/disabled by default</label>
+          <label><input type="radio" name="q4" value="mandatory"> It became mandatory</label>
+          <label><input type="radio" name="q4" value="unchanged"> No change since 2015</label>
+          <div id="fb-q4" class="feedback"></div>
+        </fieldset>
+
+        <!-- Q5: multi-select (all-or-nothing for 1 point) -->
+        <fieldset class="question">
+          <legend>5) Multi-select (choose all that apply)</legend>
+          <p>Which are true about QUIC/HTTP/3?</p>
+          <label><input type="checkbox" name="q5" value="0rtt"> 0-RTT connection resumption</label>
+          <label><input type="checkbox" name="q5" value="migration"> Connection migration between networks</label>
+          <label><input type="checkbox" name="q5" value="encryption"> Built-in encryption in the transport</label>
+          <label><input type="checkbox" name="q5" value="tcp"> Uses TCP for transport</label>
+          <label><input type="checkbox" name="q5" value="hol"> Cross-stream head-of-line blocking is common</label>
+          <div id="fb-q5" class="feedback"></div>
+        </fieldset>
+
+        <div class="quiz-actions">
+          <button type="submit">Submit quiz</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+
+      <!-- Overall result (pass/fail, total score) -->
+      <div id="overall" class="score-box" hidden></div>
+
+      <p class="note">This is a class project for IT 3203. Course link:
+        <a href="https://ksuweb.github.io/IT3203/">ksuweb.github.io/IT3203/</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
