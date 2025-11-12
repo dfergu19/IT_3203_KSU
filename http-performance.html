@@ -67,6 +67,46 @@
         <strong>Plain take:</strong> HTTP/2 and HTTP/3 try to keep your tab busy instead of stuck waiting.
         That usually means images, CSS, and scripts arrive more efficiently.
       </div>
+      
+      <!-- HTTP/2 essentials (added for milestone 2)-->
+<section id="http2">
+  <h2>HTTP/2 at a Glance</h2>
+  <ul>
+    <li><strong>Multiplexing:</strong> many streams share one TCP connection.</li>
+    <li><strong>HPACK:</strong> header compression to cut overhead.</li>
+    <li><strong>Result:</strong> better page loading for sites with many files than HTTP/1.1 pipelining.</li>
+  </ul>
+</section>
+
+<!-- HTTP/3 essentials (added for milestone 2)-->
+<section id="http3">
+  <h2>HTTP/3 at a Glance</h2>
+  <ul>
+    <li><strong>Runs over QUIC (UDP):</strong> built-in encryption & congestion control.</li>
+    <li><strong>Lower latency helpers:</strong> 0-RTT resume, connection migration (Wi-Fi → LTE), no cross-stream head-of-line blocking.</li>
+    <li><strong>QPACK:</strong> header compression designed to avoid stalls between streams.</li>
+  </ul>
+</section>
+
+<!-- What changed recently (added for milestone 2)-->
+<section id="changes">
+  <h2>What Changed Lately</h2>
+  <ul>
+    <li><strong>Prioritization:</strong> the newer, simpler <em>Priority</em> scheme replaces
+        HTTP/2’s old “priority tree,” making it easier for browsers to tell servers which
+        responses matter most.</li>
+    <li><strong>Server Push:</strong> removed from Chrome due to mixed results; the platform moved toward <em>Preload</em> and <em>Early Hints</em> instead.</li>
+  </ul>
+</section>
+
+<!-- Adoption snapshot (added for milestone 2) -->
+<section id="adoption">
+  <h2>Adoption Snapshot</h2>
+  <p>
+    HTTPS is now the default on most of the web, and HTTP/3 usage continues to rise across
+    major CDNs and large sites.
+  </p>
+</section>   
     </main>
 
     <footer class="site-footer">
