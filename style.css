@@ -176,6 +176,7 @@ thead th {
 .score-box.fail { box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15); } /* red */
 
 
+
 /* Dark theme variables (default) */
 :root {
   --bg: #0e1117;
@@ -265,10 +266,20 @@ thead th { background: var(--soft); }
 .score-box,
 .note { background: var(--soft); }
 
+/* footer background fix (removes white box in dark mode) */
+.site-footer {
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+}
+
+/* Improve readability of Key Concepts body text */
+.concepts dd { color: var(--muted); }
+
 /* Links (outside the main nav) */
 a { color: var(--link); }
 a:hover { color: var(--link-hover); }
 
 /* Banner image border in dark mode */
 .banner img { border-color: var(--border); }
+
 
