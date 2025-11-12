@@ -63,6 +63,38 @@ Content-Type: text/html
         <li>Responses have a status code (200 OK, 404 Not Found, etc.) and headers.</li>
         <li>The body is the actual content (HTML, CSS, images, JSON, and so on).</li>
       </ul>
+
+      <!-- How HTTP works (added for milestone 2) -->
+<section id="how-http-works">
+  <h2>How HTTP Works</h2>
+  <p>
+    HTTP is an application-layer protocol for requests and responses between a
+    client (browser) and a server. A client asks for a resource identified by a
+    URL; the server replies with a status code, headers (metadata), and an
+    optional body (HTML, CSS, JS, JSON, images, etc.).
+  </p>
+  <ul>
+    <li><strong>Methods:</strong> GET, POST, PUT, DELETE, …</li>
+    <li><strong>Status codes:</strong> 200 OK, 404 Not Found, 500 Server Error, …</li>
+    <li><strong>Headers:</strong> content type, language, caching hints, auth data</li>
+    <li><strong>Stateless:</strong> requests don’t remember previous ones; “state”
+        is added with cookies or other mechanisms.</li>
+    <li><strong>Transport-agnostic:</strong> the same HTTP semantics can run over
+        TCP (HTTP/1.1, HTTP/2) or QUIC (HTTP/3).</li>
+  </ul>
+</section>
+
+<!-- A tiny history and the 2022 rewrite (added for milestone 2) -->
+<section id="http-history">
+  <h2>Brief History</h2>
+  <p>
+    Early HTTP used a very small “0.9” format, then HTTP/1.0 and 1.1 became the
+    common versions. In 2022 the standards were reorganized into clear “core”
+    docs: <em>semantics</em>, <em>caching</em>, and protocol mappings for each
+    version. That cleanup removed legacy behavior and clarified how the modern
+    web uses HTTP.
+  </p>
+</section>
     </main>
 
     <footer class="site-footer">
